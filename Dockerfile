@@ -13,6 +13,7 @@ RUN apt-get update -y && \
     apt-get install -y --force-yes build-essential git-core libevent-dev && \
     cd /tmp/ && git clone https://github.com/nicolasff/webdis && \
     cd /tmp/webdis && make && make install && \
+    mkdir -p /opt/webdis/ && \
     cp /usr/local/bin/webdis /opt/webdis/ && \
     cp /etc/webdis.prod.json /opt/webdis/
 
