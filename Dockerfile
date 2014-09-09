@@ -10,10 +10,11 @@ RUN locale-gen en_US.UTF-8 ;\
     dpkg-reconfigure locales
 
 RUN apt-get update -y && \
-    apt-get -y --force-yes install curl make gcc libevent-dev && \
-    curl -o webdis-0.1.1.tar.gz https://github.com/nicolasff/webdis/archive/0.1.1.tar.gz && \
-    tar -xvzf webdis-0.1.1.tar.gz && \
-    cd webdis-0.1.1 && make && make install
+    apt-get install -y --force-yes build-essential git-core libevent-dev && \
+    cd /tmp/ && git clone https://github.com/nicolasff/webdis && \
+    cd /tmp/webdis && make && make install && \
+    cp /usr/local/bin/webdis /opt/webdis/ && \
+    cp /etc/webdis.prod.json /opt/webdis/
 
 ADD ./webdis/Dockerfile /opt/webdis/Dockerfile
 

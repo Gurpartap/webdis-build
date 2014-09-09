@@ -1,4 +1,4 @@
-FROM busybox:ubuntu-14.01
+FROM busybox:ubuntu-14.04
 
 ADD ./webdis.prod.json /etc/webdis.prod.json
 ADD ./webdis /usr/local/bin/webdis
