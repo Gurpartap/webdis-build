@@ -9,7 +9,7 @@ RUN locale-gen en_US.UTF-8 ;\
     echo 'LANG="en_US.UTF-8"' > /etc/default/locale ;\
     dpkg-reconfigure locales
 
-RUN apt-get update -qq && \
+RUN apt-get update -y && \
     apt-get -y --force-yes install curl make gcc libevent-dev && \
     curl -o webdis-0.1.1.tar.gz https://github.com/nicolasff/webdis/archive/0.1.1.tar.gz && \
     tar -xvzf webdis-0.1.1.tar.gz && \
