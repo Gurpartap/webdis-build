@@ -18,5 +18,7 @@ RUN apt-get update -y && \
     cp /etc/webdis.prod.json /opt/webdis/
 
 ADD ./webdis/Dockerfile /opt/webdis/Dockerfile
+ADD ./webdis/opkg-install /opt/webdis/opkg-install
+ADD ./webdis/opkg.conf /opt/webdis/opkg.conf
 
 CMD docker build --rm --force-rm -t gurpartap/webdis /opt/webdis/
