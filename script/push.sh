@@ -1,4 +1,4 @@
 #!/bin/sh
 # Usage: ./push.sh [TAG]
 
-docker push gurpartap/redis:${1:-latest}
+docker push gurpartap/webdis:${1:-latest}

@@ -1,6 +1,6 @@
 #!/bin/sh
 # Usage: ./clean.sh
 
-docker rm -f redis-build 2> /dev/null
-docker rmi -f gurpartap/redis-build
-docker rmi -f gurpartap/redis
+docker rm -f webdis-build 2> /dev/null
+docker rmi -f gurpartap/webdis-build
+docker rmi -f gurpartap/webdis
