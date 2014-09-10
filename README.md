@@ -6,6 +6,8 @@ Results in a minimal image and it is extremely useful for serving in docker base
 
 `docker pull gurpartap/webdis`
 
+`docker run -v ./webdis.prod.json:/etc/webdis.prod.json gurpartap/webdis`
+
 The repo is available at https://registry.hub.docker.com/u/gurpartap/webdis/.
 
 ##### Building and releasing
